@@ -1,0 +1,25 @@
+.env
+.git/
+.gitignore
+.vscode/
+
+# Python caching
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Databases and Vectors (Don't bundle existing state, let it generate or mount volume)
+# data/vector_db/
+# data/databases/
+# But wait, demo.db might be needed! We'll include data/ but ignore temp files if any.
+
+# IDEs
+.idea/
+.vs/
+*.swp
