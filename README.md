@@ -117,3 +117,18 @@ Once the UI is running, click the **⚙️ Settings Slider Icon** near the chat 
   3. Hit **Confirm**.
 
 To test the system, try asking a natural language business question such as: *"Show me the total sales by region for the last quarter."* (Refer to `testing_queries.md` for more examples).
+
+---
+
+## ☁️ Deployment (Render.com)
+
+This repository is configured for automated Docker deployments to Render. 
+
+1. Create an account at [Render.com](https://render.com/).
+2. Click **New +** and select **Web Service**.
+3. Connect your GitHub account and select the `private-sql-architect` repository.
+4. Render will automatically detect the `Dockerfile`.
+5. Under settings, scroll down to **Deploy Hook URL** and copy it.
+6. Go to your GitHub repository -> **Settings** -> **Secrets and variables** -> **Actions** -> **New repository secret**.
+7. Name the secret `RENDER_DEPLOY_HOOK_URL` and paste the URL from Render.
+8. Every push to the `main` branch will now automatically trigger a GitHub Action to test the code and deploy the latest Docker container to Render!
