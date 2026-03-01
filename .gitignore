@@ -1,0 +1,23 @@
+# Virtual Environment
+venv/
+venv2/
+.env
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Application Data
+data/vector_db/
+data/databases/demo.db
+
+# Chainlit
+.chainlit/
+chainlit.md
+.files/
+
+# OS Files
+.DS_Store
+Thumbs.db
