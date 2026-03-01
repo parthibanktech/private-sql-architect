@@ -1,4 +1,4 @@
-# 🚀 How to Run Udaasree's Private SQL Architect
+# 🚀 How to Run PSAI (Private SQL AI)
 
 This guide will walk you through exactly how to start the application and configure it to run using either **Local Ollama Models** (100% Private) or **OpenAI (ChatGPT)**.
 

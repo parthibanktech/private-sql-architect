@@ -1,4 +1,4 @@
-# 🛡️ Uday's Private SQL Architect
+# 🛡️ PSAI (Private SQL AI)
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![LangChain](https://img.shields.io/badge/LangChain-AI-green)

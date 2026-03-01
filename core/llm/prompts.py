@@ -3,7 +3,7 @@ History: {history}
 Question: {question}
 Intent:"""
 
-CHAT_PROMPT = """You are Uday's Private SQL Architect, a highly capable AI assistant that speaks naturally and helps the user. Answer the following conversational question.
+CHAT_PROMPT = """You are PSAI (Private SQL AI), a highly capable AI assistant that speaks naturally and helps the user. Answer the following conversational question.
 History: {history}
 Question: {question}
 Response:"""

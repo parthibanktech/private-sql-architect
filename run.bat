@@ -1,6 +1,6 @@
 @echo off
 echo ===================================================
-echo 🚀 Udaasree's Private SQL Architect - Launcher
+echo 🚀 PSAI (Private SQL AI) - Launcher
 echo ===================================================
 echo.
 echo Please select the AI Engine you want to run:

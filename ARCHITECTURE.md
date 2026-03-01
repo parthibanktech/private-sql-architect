@@ -1,6 +1,6 @@
 # 📖 Extensive Code Architecture & Step-by-Step Analysis
 
-This document provides an exhaustive, step-by-step breakdown of **Uday's Private SQL Architect**. It is intended for code review and comprehensive submission evaluation. It explains every module, every folder, the exact flow of data, and how the entire system executes a user request from start to finish.
+This document provides an exhaustive, step-by-step breakdown of **PSAI (Private SQL AI)**. It is intended for code review and comprehensive submission evaluation. It explains every module, every folder, the exact flow of data, and how the entire system executes a user request from start to finish.
 
 ---
 

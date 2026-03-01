@@ -18,14 +18,14 @@ async def on_chat_start():
     global GLOBAL_RETRIEVER
     # Set AI Avatar
     try:
-        await cl.Avatar(name="Uday's Private SQL Architect", path="public/logo.png").send()
+        await cl.Avatar(name="PSAI (Private SQL AI)", path="public/logo.png").send()
     except Exception:
         pass
 
     welcome_msg = """
 ![Logo](/public/logo.png)
 
-# 🕵️‍♂️ Uday's Private SQL Architect
+# 🕵️‍♂️ PSAI (Private SQL AI)
 **Premium AI Data Assistant** | **Local & Secure**
 
 ---
@@ -174,7 +174,7 @@ async def on_message(message: cl.Message):
     
     try:
         # 1. Routing Decision (Inside Step)
-        async with cl.Step("🧠 Uday AI is thinking...") as step:
+        async with cl.Step("🧠 PSAI is thinking...") as step:
             step.input = message.content
             
             intent_chain = cl.user_session.get("intent_chain")
