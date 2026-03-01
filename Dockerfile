@@ -13,5 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
 
+# Set Python path so imports from modules/ and core/ work correctly
+ENV PYTHONPATH="/app"
+
 # Run chainlit when the container launches
 CMD ["chainlit", "run", "interfaces/ui/app.py", "-w", "--host", "0.0.0.0", "--port", "8000"]
