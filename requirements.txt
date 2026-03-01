@@ -8,3 +8,4 @@ langchain-openai
 pandas
 pypdf
 qdrant-client
+pydantic<2.10
