@@ -1,10 +1,14 @@
 import chainlit as cl
 import chainlit.input_widget as iw
 import re
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
 
 load_dotenv()
+
+# Provide a default JWT secret for cloud deployments where .env is missing
+os.environ.setdefault("CHAINLIT_AUTH_SECRET", "uE1n6Xb-7O-65Q81e4Yt0sB3I57LzT2i9c6=")
+
 
 from modules.retrieval.rag import setup_rag_pipeline
 from core.llm.chains import update_chain
