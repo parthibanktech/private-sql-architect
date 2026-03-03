@@ -13,6 +13,14 @@ from modules.database.database import execute_sql
 # --- Global Vector Store ---
 GLOBAL_RETRIEVER = None
 
+# --- Authentication Module ---
+@cl.password_auth_callback
+async def auth_callback(username, password):
+    # Dummy sign-up / login: Accepts any non-empty username & password
+    if username and password:
+        return cl.User(identifier=username)
+    return None
+
 @cl.on_chat_start
 async def on_chat_start():
     global GLOBAL_RETRIEVER
@@ -22,25 +30,16 @@ async def on_chat_start():
     except Exception:
         pass
 
-    welcome_msg = """
-![Logo](/public/logo.png)
 
+    welcome_msg = """
 # 🕵️‍♂️ PSAI (Private SQL AI)
 **Premium AI Data Assistant** | **Local & Secure**
 
 ---
 
-### 🚀 Capabilities:
-*   🛡️ **100% Private**: Your database schema and data never leave this machine.
-*   🧠 **Multi-Model Logic**: Choice between Fast (1.5B), Balanced (3B), and Enterprise (7B+) models.
-*   🔄 **Conversation Memory**: I remember up to 25 previous turns.
-*   🌐 **Universal Dialect**: Native support for Oracle, PostgreSQL, and SQLite.
-
----
-
-### 💡 Quick Start & Setup:
-1.  **⚙️ Open Settings (Combo Box)**: Click the **Settings Slider Icon** (usually near the chat input or in the top right menu or sidebar depending on your Chainlit version) to **choose your Model (Ollama/ChatGPT)** and Dialect!
-2.  **💬 Natural Language**: After picking your model, ask questions like *"What were the top 5 products sold?"*.
+### 🚀 Immediate Instructions:
+1. **⚙️ Enable Connection**: Open settings slider and connect to your preferred AI Model and Database Dialect.
+2. **💬 Chat using Natural Language**: You can now ask queries about your selected database natively. 
 """
     await cl.Message(content=welcome_msg).send()
     cl.user_session.set("memory", [])

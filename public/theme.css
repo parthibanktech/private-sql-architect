@@ -1,0 +1,154 @@
+/* Chainlit Custom Workspace - 'Recursive Reasoning Engine' Aesthetic */
+
+/* Import matching fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Color Palette */
+    --bg-primary: #121212;
+    /* Main chat backdrop */
+    --bg-panel: #1a1b1e;
+    /* Sidebar backdrop */
+    --bg-element: #222327;
+    /* Bubbles and inputs */
+    --border-subtle: #333333;
+    --text-primary: #efefef;
+    --text-muted: #8b8b8b;
+    --accent: #1ebd7d;
+    /* Green accents */
+}
+
+/* Force baseline resets */
+body,
+#root,
+.cl-body-container {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+/* Base text */
+p,
+span,
+div {
+    font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+/************************
+ * SIDEBAR & HEADER
+ ************************/
+.MuiDrawer-paper {
+    background-color: var(--bg-panel) !important;
+    border-right: 1px solid var(--border-subtle) !important;
+}
+
+/* Remove default giant logos or icons */
+.cl-header {
+    background: transparent !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+/* Clean sidebar list items */
+.MuiListItemText-primary {
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    color: var(--text-primary) !important;
+}
+
+.MuiListItemText-secondary {
+    color: var(--text-muted) !important;
+}
+
+/************************
+ * CHAT MESSAGE BUBBLES
+ ************************/
+.cl-chat-message-container {
+    max-width: 900px !important;
+    /* Keep conversations constrained and readable */
+}
+
+/* The outer transparent shell of messages */
+.cl-message {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* User Message specific overrides */
+.cl-message[data-sender="User"] .MuiBox-root {
+    background-color: transparent !important;
+    border-top: 1px solid var(--border-subtle) !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+    margin: 10px 0 !important;
+    padding: 20px 0 !important;
+}
+
+.cl-message[data-sender="User"] .cl-message-content {
+    color: var(--text-primary) !important;
+}
+
+/* AI Assistant Message specific overrides */
+.cl-message[data-sender="PSAI (Private SQL AI)"] .MuiBox-root,
+.cl-message[data-sender="Assistant"] .MuiBox-root {
+    background-color: var(--bg-element) !important;
+    border-radius: 12px !important;
+    margin: 16px 0 !important;
+    padding: 24px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/************************
+ * CHAT INPUT BAR
+ ************************/
+/* Redesign the input to be dark, pill-shaped, matching reference */
+.MuiInputBase-root.cl-chat-input {
+    background-color: var(--bg-panel) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 20px !important;
+    padding: 10px 16px !important;
+}
+
+/* Expand on focus */
+.MuiInputBase-root.cl-chat-input.Mui-focused {
+    border-color: #555 !important;
+    background-color: #202124 !important;
+}
+
+/* Text inside input */
+.cl-chat-input textarea {
+    color: var(--text-primary) !important;
+    font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+/* Submit/Send buttons */
+.cl-chat-input .MuiButtonBase-root {
+    color: var(--text-muted) !important;
+}
+
+/************************
+ * BUTTONS & WIDGETS
+ ************************/
+/* Darken dropdown menus and dialog boxes */
+.MuiPaper-root.MuiMenu-paper {
+    background-color: var(--bg-element) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-subtle) !important;
+}
+
+.MuiMenuItem-root:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.MuiSelect-select {
+    color: var(--text-primary) !important;
+}
+
+/* Ensure headings strictly follow white palette */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
